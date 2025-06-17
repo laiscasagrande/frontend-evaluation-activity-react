@@ -2,6 +2,7 @@ import './App.css';
 import { Servicos } from './routes/Servicos';
 import { TelaInicial } from './routes/TelaInicial';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { TelaNome } from './routes/TelaNomeUsuario';
 
 const router = createBrowserRouter([
   {
@@ -9,11 +10,15 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <TelaInicial />,
+        element: <TelaNome />,
       },
       {
         path: '/servicos',
         element: <Servicos />,
+      },
+      {
+        path: '/inicial',
+        element: <TelaInicial />,
       },
     ],
   },
