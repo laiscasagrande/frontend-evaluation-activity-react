@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './index.css';
 import { useForm } from 'react-hook-form';
 import { Send } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function TelaInicial() {
     const [enviarMensagem, setEnviarMensagem] = useState('');
@@ -26,7 +27,7 @@ export function TelaInicial() {
                     <section class="message-item">
                         <p class="msg-user"><strong>Atendente diz:</strong></p>
                         <article class="msg-chat">
-                            <div className="message-format">Olá, bom dia<br />Clique aqui para ver nossos serviços</div>
+                            <div className="message-format">Olá, bom dia<br /><Link to="/servicos" class="link-servico">Clique aqui para ver nossos serviços</Link></div>
                             <div class="schedule-and-check">
                                 <div class="time">15:41</div>
                                 <div class="icon-check-check" data-lucide="check-check"></div>

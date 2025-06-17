@@ -1,15 +1,19 @@
 import './App.css';
-import { TelaInicial } from './TelaInicial';
+import { Servicos } from './routes/Servicos';
+import { TelaInicial } from './routes/TelaInicial';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RootLayout />,
     children: [
       {
         path: '/',
         element: <TelaInicial />,
+      },
+      {
+        path: '/servicos',
+        element: <Servicos />,
       },
     ],
   },
